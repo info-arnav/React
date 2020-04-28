@@ -24,13 +24,28 @@ const distruct = ({ name }) => {
 };
 
 const app = () => {
+  return (
+    <div>
+      <h1>adopt me</h1>
+      {React.createElement(data)},
+      {React.createElement(random, { name: "this is a random name" })}
+      {React.createElement(distruct, { name: "name is just name" })}
+    </div>
+  );
+};
+
+/*
+
+backend functioning of above
+const app = () => {
   return React.createElement("div", {}, [
-    React.createElement("h1", {}, "Adopt Me!"),
+    React.createElement("h1", {}, "Adopt Me!"),s
     React.createElement(data),
     React.createElement(random, { name: "this is a random name" }),
     React.createElement(distruct, { name: "name is just name" }),
   ]);
 };
+*/
 
 const test = () => {
   return React.createElement("h1", {}, "only for testing purposes");
