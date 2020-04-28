@@ -54,8 +54,6 @@ const test = () => {
 render(React.createElement(test), document.getElementById("root"));
 
 /*ReactDOM.render*/ render(
-  <app />,
+  React.createElement(app), //<app />
   document.getElementById("root")
-  //React.createElement(app),
-  //document.getElementById("root")
 );
