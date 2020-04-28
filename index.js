@@ -29,7 +29,7 @@ const app = () => {
       <h1>adopt me</h1>
       {React.createElement(data)},
       {React.createElement(random, { name: "this is a random name" })}
-      {React.createElement(distruct, { name: "name is just name" })}
+      <distruct name="name is just random"></distruct>
     </div>
   );
 };
@@ -54,6 +54,8 @@ const test = () => {
 render(React.createElement(test), document.getElementById("root"));
 
 /*ReactDOM.render*/ render(
-  React.createElement(app),
+  <app />,
   document.getElementById("root")
+  //React.createElement(app),
+  //document.getElementById("root")
 );
