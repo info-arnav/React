@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useDrop } from "./useDrop";
+export default useDrop;
 export const searchParams = () => {
   const changableArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const [array, changeValue] = useState(changableArray);
+  const [random, caller] = useDrop("random", "this is default value", array);
+  const [array, changeValue] = useState("please choose an option");
   const [location, setLocation] = useState("Seattle"); //suse state is as hook in hich oation sis sssseattle and setlocations ca  change the location hen called
   return (
     <div className="search-params">
@@ -18,6 +21,7 @@ export const searchParams = () => {
             }}
           ></input>
         </label>
+        <caller />
         <label htmlFor="pet">
           pet
           <select
@@ -28,11 +32,13 @@ export const searchParams = () => {
           >
             <option>All</option>
             {changableArray.map((animal) => (
-              <option value={animal}>{animal}</option>
+              <option key={animal} value={animal}>
+                {animal}
+              </option>
             ))}
           </select>
-          <button>Submit</button>
         </label>
+        <button>Submit</button>
       </form>
     </div>
   );
