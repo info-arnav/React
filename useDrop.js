@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const useDrop = (name, defaultValue, array) => {
+export const useDrop = (name, defaultValue, array) => {
   const [mainValue, changer] = useState(defaultValue);
   const key = { name };
   const creator = () => (
@@ -23,5 +23,3 @@ const useDrop = (name, defaultValue, array) => {
   );
   return [mainValue, changer, creator];
 };
-
-export default useDrop;
