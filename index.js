@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-dom"; //{render} => React-DOM
+import { searchParams } from "./searchParams";
 
 const data = () => {
   return React.createElement("div", {}, [
@@ -23,13 +24,24 @@ const distruct = ({ name }) => {
   return React.createElement("div", {}, React.createElement("h6", {}, name));
 };
 
+/*
+const app = () => {
+  return (
+    <div>
+      <h1> Adopt Me ! is the heading of this page</h1>
+      {React.createElement(data)}
+      {React.createElement(random, { name: "this is a random name" })}
+      <distruct name="name is just random"></distruct>
+    </div>;
+  )
+};
+*/
+
 const app = () => {
   return (
     <div>
       <h1>adopt me</h1>
-      {React.createElement(data)}
-      {React.createElement(random, { name: "this is a random name" })}
-      <distruct name="name is just random"></distruct>
+      <div>{React.createElement(searchParams)}</div>
     </div>
   );
 };
