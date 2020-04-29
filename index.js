@@ -27,7 +27,7 @@ const app = () => {
   return (
     <div>
       <h1>adopt me</h1>
-      {React.createElement(data)},
+      {React.createElement(data)}
       {React.createElement(random, { name: "this is a random name" })}
       <distruct name="name is just random"></distruct>
     </div>
