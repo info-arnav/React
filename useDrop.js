@@ -21,5 +21,5 @@ export const useDrop = (name, defaultValue, array) => {
       </select>
     </label>
   );
-  return [mainValue, changer, creator];
+  return [creator];
 };

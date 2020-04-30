@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { render } from "react-dom"; //{render} => React-DOM
-import { searchParams } from "./searchParams";
+import { SearchParams } from "./SearchParams";
+import { useDrop } from "./useDrop";
 
 const data = () => {
   return React.createElement("div", {}, [
@@ -41,7 +42,7 @@ const app = () => {
   return (
     <div>
       <h1>adopt me</h1>
-      <div>{React.createElement(searchParams)}</div>
+      <div>{React.createElement(SearchParams)}</div>
     </div>
   );
 };
