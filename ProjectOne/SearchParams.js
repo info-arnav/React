@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDrop } from "./useDrop";
 export default useDrop;
 export const SearchParams = () => {
@@ -9,7 +9,7 @@ export const SearchParams = () => {
     changableArray
   );
   const [array, ChangeValue] = useState("please choose an option");
-  const [location, SetLocation] = useState("Seattle"); //suse state is as hook in hich oation sis sssseattle and setlocations ca  change the location hen called
+  const [location, SetLocation] = useState("Seattle, WA"); //suse state is as hook in hich oation sis sssseattle and setlocations ca  change the location hen called
   return (
     <div className="search-params">
       <h1>{location}</h1>
